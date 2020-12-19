@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>TCompose2</title>
+  </head>
+  <body onload="pslab()">
+    <!-- Include Scala.js compiled code -->
+    <script type="text/javascript" src="./target/scala-3.0.0-M2/pslab-fastopt/main.js"></script>
+    <script>
+      const pslab = () => {
+        const tests = [
+          pslab_compose2_tests(), 
+          pslab_mathalgos_tests()
+        ]
+        document.write(tests.join("<br/>"))
+      }
+    </script>
+  </body>
+</html>

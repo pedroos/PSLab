@@ -1,4 +1,4 @@
-package pslab.mathalgos
+package pslab.mathalgos.integers
 
 import pslab.general.{assEq}
 import scala.scalajs.js.annotation.{JSExport, JSExportTopLevel}
@@ -39,7 +39,7 @@ def divisible(a: Int, b: Int): Boolean =
     tailDigit(a) == 0
   else false
 
-def primeFac(n: Int) = n+1 // PAROU
+def primeFac(n: Int) = n+1
 
 object TestExport {
   @JSExportTopLevel("pslab_mathalgos_all_tests")

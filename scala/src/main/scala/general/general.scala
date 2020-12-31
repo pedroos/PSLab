@@ -10,3 +10,7 @@ def assEq[R](testName: String, result: () => R, expected: R): String = {
 }
 
 def joinTests(testRes: Array[String]): String = testRes.mkString(java.lang.System.lineSeparator)
+
+class Ex (msg: String) {
+    override def toString() = msg
+}

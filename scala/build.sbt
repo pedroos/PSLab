@@ -1,6 +1,6 @@
 val scala3Version = "3.0.0-M2"
 
-enablePlugins(ScalaJSPlugin)
+// enablePlugins(ScalaJSPlugin)
 
 lazy val root = project
   .in(file("."))
@@ -11,8 +11,10 @@ lazy val root = project
     scalaVersion := scala3Version,
 
     // This is an application with a main method
-    scalaJSUseMainModuleInitializer := true
+    // scalaJSUseMainModuleInitializer := true
   )
+
+//unmanagedSources / includeFilter := "main.scala" || "general.scala" || "*index.scala*"
 
 scalacOptions ++= Seq(
   // "-language:strictEquality"

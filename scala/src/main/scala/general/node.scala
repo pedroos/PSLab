@@ -14,49 +14,41 @@ import scala.collection.mutable.{ListBuffer}
 // class ElementDoesntExistEx(where: Option[String]) extends Ex(
 //     s"ElementDoesntExistException: ${if (where.isDefined) " " + where else ""}")
 
-class Node[T] (
-  var parent: Option[Node[T]] = None, 
-  val children: Option[Seq[Node[T]]] = None, 
+class Node (
+  var parent: Option[Node] = None, 
+  val children: Option[Seq[Node]] = None, 
   val level: Option[Int] = None, 
-  val v: T
+  val v: Any
 ) {
   children foreach {_.foreach {_.parent = Some(this)}}
 
-  def this(v: T, children: Option[Seq[Node[T]]]) = this(None, children, None, v)
-  def this(nd: Node[T], lvl: Int) = this(nd.parent, nd.children, Some(lvl), nd.v)
+  def this(v: Any, children: Option[Seq[Node]]) = this(None, children, None, v)
+  def this(nd: Node, lvl: Int) = this(nd.parent, nd.children, Some(lvl), nd.v)
   override def toString() = v.toString
-  override def equals(that: Any) = that match { case th: Node[T] => th.v equals v }
+  override def equals(that: Any) = that match { case th: Node => th.v equals v }
 }
 
 object Node {
 }
 
-// def tree[T](init: Node[T], children: Option[Seq[Node[T]]] = None) = {
+// def tree(init: Node, children: Option[Seq[Node]] = None) = {
 //   children foreach {_.foreach {_.parent = Some(init)}}
 //   // init.children = ch
 //   // init.copy(children = ch)
 // }
 
-def depthFirst[T](node: Node[T], lvl: Int, path: ListBuffer[Node[T]]): Unit = {
-  path += Node[T](node, lvl)
+def depthFirst(node: Node, lvl: Int, path: ListBuffer[Node]): Unit = {
+  path += Node(node, lvl)
   node.children foreach {_.foreach {depthFirst(_, lvl + 1, path)} }
-}
-
-def depthFirst[T](node: Node[T], lvl: Int, path: ListBuffer[Node[T]], stop: ListBuffer[Node[T]] => Boolean): Unit = {
-  path += Node[T](node, lvl)
-  println(path)
-  println(path.length)
-  node.children foreach {_.foreach { if (!stop(path)) depthFirst(_, lvl + 1, path, stop) }}
 }
 
 object Tests {
   def allTests() = Seq(
-    // eqTest1(), 
-    // eqTest2(), 
-    // parentTest(), 
-    // dfTest1(), 
-    // dfTest2()
-    dfTest2b()
+    eqTest1(), 
+    eqTest2(), 
+    parentTest(), 
+    dfTest1(), 
+    dfTest2()
   )
 
   def eqTest1() = {
@@ -94,7 +86,7 @@ object Tests {
           Node(4, None)))), 
         Node(5, None))))
     
-    val path = ListBuffer[Node[Int]]()
+    val path = ListBuffer[Node]()
     depthFirst(tr1, 0, path)
     path map {_.v} equals Seq(1, 2, 3, 4, 5)
   }
@@ -107,21 +99,8 @@ object Tests {
           Node(4, None)))), 
         Node(5, None))))
     
-    val path = ListBuffer[Node[Int]]()
-    depthFirst(tr1, 0, path, (pt: ListBuffer[Node[Int]]) => false)
+    val path = ListBuffer[Node]()
+    depthFirst(tr1, 0, path)
     path map {_.v} equals Seq(1, 2, 3, 4, 5)
-  }
-
-  def dfTest2b() = {
-    val tr1 = 
-      Node(1, Some(Seq(
-        Node(2, Some(Seq(
-          Node(3, None), 
-          Node(4, None)))), 
-        Node(5, None))))
-
-    val path = ListBuffer[Node[Int]]()
-    depthFirst(tr1, 0, path, (pt: ListBuffer[Node[Int]]) => pt.length >= 3)
-    path map {_.v} equals ListBuffer(1, 2, 3)
   }
 }

@@ -8,13 +8,12 @@ import pslab.geom.{Tests => GeomTests}
 import pslab.index.{Tests => IndexTests}
 import pslab.zon.vargraph.{Tests => ZonVarGraphTests}
 
-@main def Main() = {
+@main def Main() =
   println(Seq(
     // joinTests(MaIntTests.all()), 
     // joinTests(MaVecTests.all()), 
     // joinTests(GeomTests.all()), 
     // IndexTests.test1(), 
-    // ZonVarGraphTests.test1(), 
-    NodeTests.allTests()
+    ZonVarGraphTests.allTests()
+    // NodeTests.allTests()
   ).flatten.mkString(java.lang.System.lineSeparator))
-}

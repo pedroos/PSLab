@@ -1,4 +1,4 @@
-namespace LimitsFsharpTests
+namespace Pslab.Limits.Tests
 
 open System
 open Microsoft.VisualStudio.TestTools.UnitTesting

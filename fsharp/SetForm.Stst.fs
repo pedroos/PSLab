@@ -11,7 +11,7 @@ module Stst =
     and Sset<'t> = T of option<'t> | S of SetSucc<'t>
 
     // Stst Tuple. Non-Set.
-       
+    
     type TupleSucc<'t> (a: Stuple<'t>, b: Stuple<'t>) = 
         member this.a = a
         member this.b = b

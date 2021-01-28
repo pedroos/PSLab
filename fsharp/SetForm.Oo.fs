@@ -7,14 +7,14 @@ module Oo =
         member this.elems = elems
         
     // SetElement is a subtype of Set with a single particular value and no Sets. It initializes an empty Set only for 
-    // the subtyping. So not optimal Object-Oriented form.
+    // the subtyping. Not optimal Object-Oriented form. This corresponds to an Urelement in set theory.
 
     type SetElement<'t> (x: option<'t>) = 
         inherit Oset<'t>([])
         member this.x = x
     
     // Alternative: the below Set Element assigns its value to its Set object instead of an individual property, thus 
-    // reconciling Object Orientation. However, it recurses infinitely at runtime
+    // reconciling Object Orientation. However, it recurses infinitely at runtime.
 
     type SetElement2<'t> (x: option<'t>) = 
         inherit Oset<'t>([SetElement2<'t>(x)])

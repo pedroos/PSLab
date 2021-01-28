@@ -7,8 +7,12 @@
     <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>FS0025;FS0058</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
-    <Compile Include="SetForm1Tests.fs" />
+    <Compile Include="SetFormTests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

@@ -1,7 +1,7 @@
 ﻿namespace Pslab.Limits.SetForm
 
 module Mixed = 
-    // Stst types consume Oo types in their recursive position, thus mixing Stst and Oo.
+    // Stst types consume Oo types in their recursive component, thus mixing Stst and Oo.
     // The consequence is that the hierarchy is OO + STST simultaneously.
     // It can be traversed via inheritance, or via pattern matching on all non-terminal nodes.
     // Only terminal nodes are either OO or STST, and this determines their reachability (by inheritance or pattern 
@@ -32,16 +32,22 @@ module Mixed =
         
     type Otuple3<'t>(a: Sset<'t>, b: Sset<'t>, c: Sset<'t>) = 
         inherit Otuple2<'t>(
-            Sset.S(Otuple2<'t>(a, b) :> Oset<'t>), 
+            Sset.S(Otuple2<'t>(
+                a, 
+                b
+            )), 
             c
         )
                     
     and Otuple4<'t>(a: Sset<'t>, b: Sset<'t>, c: Sset<'t>, d: Sset<'t>) = 
         inherit Otuple2<'t>(
             Sset.S(Otuple2<'t>(
-                Sset.S(Otuple2<'t>(a, b) :> Oset<'t>), 
+                Sset.S(Otuple2<'t>(
+                    a, 
+                    b
+                )), 
                 c
-            ) :> Oset<'t>), 
+            )), 
             d
         )
         
@@ -54,7 +60,7 @@ module Mixed =
 
     // Unification: defines a single Stst type for Sets, Tuples, or any other. (Just for kicks.)
     
-    // However, single Stst only differs from canonical Sset by being specific about its T component, which is a 
+    // However, single Stst only differs from canonical Sset by being specific about its terminus component, which is a 
     // generic type; but as Otuple (and eventual others) should be children to Sset, this is in the wrong direction; 
     // Stst T being Sset is more generic, obviating unification.
     

@@ -50,7 +50,7 @@ type SetFormTests () =
         // Iterating as Sets. Needs fiddling with Sets elements, where with Pair elements (where possible) would be 
         // preferrable; and Set internal representation subject to change.
 
-        // The complete matching form for iterating is wasteful.
+        // The complete matching form for iterating is uneeded.
 
         //let v: option<int> = 
         //    match r with 
@@ -92,6 +92,7 @@ type SetFormTests () =
             ))
 
         // Iterate as Pairs. Needs due to lack of covariance a Pair > Set runtime cast, fair enough syntax.
+        // For example, wrongly casting a Pair as a Tuple3 would fail at runtime.
 
         let v: int = 
             match r with Su su -> 

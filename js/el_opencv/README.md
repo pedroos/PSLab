@@ -1,0 +1,1 @@
+![](el_opencv.png)

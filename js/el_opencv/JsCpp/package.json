@@ -1,0 +1,16 @@
+{
+  "main": "lib/binding.js",
+  "dependencies": {
+    "node-addon-api": "^1.1.0"
+  },
+  "scripts": {
+    "test": "node --napi-modules ./test/test_binding.js", 
+    "build": "node-gyp rebuild"
+  },
+  "gypfile": true,
+  "name": "jscpp2",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

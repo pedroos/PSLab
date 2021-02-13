@@ -1,0 +1,73 @@
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 3fr 1fr;
+  grid-template-rows: auto 80vh;
+  grid-gap: 5px;
+}
+
+.grid > div {
+  border: 1px solid black;
+}
+
+.grid > .cell3 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: auto 32px;
+  grid-template-rows: 20px 1fr;
+  grid-gap: 5px;
+  max-height: 100%;
+  height: 100%;
+}
+
+.grid2 > .textfield {
+  display: flex;
+}
+
+.grid2 > .textfield > #fileChooseText {
+  flex-grow: 1;
+}
+
+.grid2 > .button {
+  justify-self: end;
+}
+
+#inputsCell {
+  max-height: 100%;
+  overflow-y: scroll;
+  grid-column: 1 / span 2;
+}
+
+#inputsCell .items {  
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#inputsCell .item {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #888888;
+  overflow-wrap: break-word;
+}
+
+#algosCell {
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+#algosCell .items {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#algosCell .item {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #888888;
+  overflow-wrap: break-word;
+}

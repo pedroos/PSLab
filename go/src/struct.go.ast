@@ -1,0 +1,315 @@
+     0  *ast.File {
+     1  .  Package: pslab/struct.go:1:1
+     2  .  Name: *ast.Ident {
+     3  .  .  NamePos: pslab/struct.go:1:9
+     4  .  .  Name: "pslab"
+     5  .  }
+     6  .  Decls: []ast.Decl (len = 2) {
+     7  .  .  0: *ast.GenDecl {
+     8  .  .  .  TokPos: pslab/struct.go:3:1
+     9  .  .  .  Tok: import
+    10  .  .  .  Lparen: pslab/struct.go:3:8
+    11  .  .  .  Specs: []ast.Spec (len = 1) {
+    12  .  .  .  .  0: *ast.ImportSpec {
+    13  .  .  .  .  .  Name: *ast.Ident {
+    14  .  .  .  .  .  .  NamePos: pslab/struct.go:4:2
+    15  .  .  .  .  .  .  Name: "_"
+    16  .  .  .  .  .  }
+    17  .  .  .  .  .  Path: *ast.BasicLit {
+    18  .  .  .  .  .  .  ValuePos: pslab/struct.go:4:4
+    19  .  .  .  .  .  .  Kind: STRING
+    20  .  .  .  .  .  .  Value: "\"fmt\""
+    21  .  .  .  .  .  }
+    22  .  .  .  .  .  EndPos: -
+    23  .  .  .  .  }
+    24  .  .  .  }
+    25  .  .  .  Rparen: pslab/struct.go:5:1
+    26  .  .  }
+    27  .  .  1: *ast.GenDecl {
+    28  .  .  .  TokPos: pslab/struct.go:7:1
+    29  .  .  .  Tok: type
+    30  .  .  .  Lparen: -
+    31  .  .  .  Specs: []ast.Spec (len = 1) {
+    32  .  .  .  .  0: *ast.TypeSpec {
+    33  .  .  .  .  .  Name: *ast.Ident {
+    34  .  .  .  .  .  .  NamePos: pslab/struct.go:7:6
+    35  .  .  .  .  .  .  Name: "A"
+    36  .  .  .  .  .  .  Obj: *ast.Object {
+    37  .  .  .  .  .  .  .  Kind: type
+    38  .  .  .  .  .  .  .  Name: "A"
+    39  .  .  .  .  .  .  .  Decl: *(obj @ 32)
+    40  .  .  .  .  .  .  }
+    41  .  .  .  .  .  }
+    42  .  .  .  .  .  Assign: -
+    43  .  .  .  .  .  Type: *ast.StructType {
+    44  .  .  .  .  .  .  Struct: pslab/struct.go:7:8
+    45  .  .  .  .  .  .  Fields: *ast.FieldList {
+    46  .  .  .  .  .  .  .  Opening: pslab/struct.go:7:15
+    47  .  .  .  .  .  .  .  List: []*ast.Field (len = 4) {
+    48  .  .  .  .  .  .  .  .  0: *ast.Field {
+    49  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+    50  .  .  .  .  .  .  .  .  .  .  NamePos: pslab/struct.go:8:2
+    51  .  .  .  .  .  .  .  .  .  .  Name: "bool"
+    52  .  .  .  .  .  .  .  .  .  }
+    53  .  .  .  .  .  .  .  .  }
+    54  .  .  .  .  .  .  .  .  1: *ast.Field {
+    55  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+    56  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+    57  .  .  .  .  .  .  .  .  .  .  .  NamePos: pslab/struct.go:9:2
+    58  .  .  .  .  .  .  .  .  .  .  .  Name: "A2"
+    59  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    60  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+    61  .  .  .  .  .  .  .  .  .  .  .  .  Name: "A2"
+    62  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 54)
+    63  .  .  .  .  .  .  .  .  .  .  .  }
+    64  .  .  .  .  .  .  .  .  .  .  }
+    65  .  .  .  .  .  .  .  .  .  }
+    66  .  .  .  .  .  .  .  .  .  Type: *ast.StructType {
+    67  .  .  .  .  .  .  .  .  .  .  Struct: pslab/struct.go:9:5
+    68  .  .  .  .  .  .  .  .  .  .  Fields: *ast.FieldList {
+    69  .  .  .  .  .  .  .  .  .  .  .  Opening: pslab/struct.go:9:12
+    70  .  .  .  .  .  .  .  .  .  .  .  List: []*ast.Field (len = 3) {
+    71  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Field {
+    72  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+    73  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: pslab/struct.go:10:3
+    74  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "bool"
+    75  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+    76  .  .  .  .  .  .  .  .  .  .  .  .  }
+    77  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.Field {
+    78  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+    79  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: pslab/struct.go:11:3
+    80  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "int"
+    81  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+    82  .  .  .  .  .  .  .  .  .  .  .  .  }
+    83  .  .  .  .  .  .  .  .  .  .  .  .  2: *ast.Field {
+    84  .  .  .  .  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+    85  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+    86  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: pslab/struct.go:12:3
+    87  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "a2i"
+    88  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    89  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+    90  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "a2i"
+    91  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 83)
+    92  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+    93  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+    94  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+    95  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.ArrayType {
+    96  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrack: pslab/struct.go:12:7
+    97  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Elt: *ast.Ident {
+    98  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: pslab/struct.go:12:9
+    99  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "int"
+   100  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   101  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   102  .  .  .  .  .  .  .  .  .  .  .  .  }
+   103  .  .  .  .  .  .  .  .  .  .  .  }
+   104  .  .  .  .  .  .  .  .  .  .  .  Closing: pslab/struct.go:13:2
+   105  .  .  .  .  .  .  .  .  .  .  }
+   106  .  .  .  .  .  .  .  .  .  .  Incomplete: false
+   107  .  .  .  .  .  .  .  .  .  }
+   108  .  .  .  .  .  .  .  .  }
+   109  .  .  .  .  .  .  .  .  2: *ast.Field {
+   110  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   111  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   112  .  .  .  .  .  .  .  .  .  .  .  NamePos: pslab/struct.go:14:2
+   113  .  .  .  .  .  .  .  .  .  .  .  Name: "ai"
+   114  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   115  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   116  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ai"
+   117  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 109)
+   118  .  .  .  .  .  .  .  .  .  .  .  }
+   119  .  .  .  .  .  .  .  .  .  .  }
+   120  .  .  .  .  .  .  .  .  .  }
+   121  .  .  .  .  .  .  .  .  .  Type: *ast.ArrayType {
+   122  .  .  .  .  .  .  .  .  .  .  Lbrack: pslab/struct.go:14:5
+   123  .  .  .  .  .  .  .  .  .  .  Elt: *ast.StructType {
+   124  .  .  .  .  .  .  .  .  .  .  .  Struct: pslab/struct.go:14:7
+   125  .  .  .  .  .  .  .  .  .  .  .  Fields: *ast.FieldList {
+   126  .  .  .  .  .  .  .  .  .  .  .  .  Opening: pslab/struct.go:14:14
+   127  .  .  .  .  .  .  .  .  .  .  .  .  List: []*ast.Field (len = 2) {
+   128  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Field {
+   129  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   130  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: pslab/struct.go:15:3
+   131  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "string"
+   132  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   133  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   134  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.Field {
+   135  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   136  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   137  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: pslab/struct.go:16:3
+   138  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "aib"
+   139  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   140  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   141  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "aib"
+   142  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 134)
+   143  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   144  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   145  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   146  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Type: *ast.ArrayType {
+   147  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lbrack: pslab/struct.go:16:7
+   148  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Elt: *ast.Ident {
+   149  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: pslab/struct.go:16:9
+   150  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "bool"
+   151  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   152  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   153  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   154  .  .  .  .  .  .  .  .  .  .  .  .  }
+   155  .  .  .  .  .  .  .  .  .  .  .  .  Closing: pslab/struct.go:17:2
+   156  .  .  .  .  .  .  .  .  .  .  .  }
+   157  .  .  .  .  .  .  .  .  .  .  .  Incomplete: false
+   158  .  .  .  .  .  .  .  .  .  .  }
+   159  .  .  .  .  .  .  .  .  .  }
+   160  .  .  .  .  .  .  .  .  }
+   161  .  .  .  .  .  .  .  .  3: *ast.Field {
+   162  .  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   163  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   164  .  .  .  .  .  .  .  .  .  .  .  NamePos: pslab/struct.go:18:2
+   165  .  .  .  .  .  .  .  .  .  .  .  Name: "ai2"
+   166  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   167  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   168  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ai2"
+   169  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 161)
+   170  .  .  .  .  .  .  .  .  .  .  .  }
+   171  .  .  .  .  .  .  .  .  .  .  }
+   172  .  .  .  .  .  .  .  .  .  }
+   173  .  .  .  .  .  .  .  .  .  Type: *ast.ArrayType {
+   174  .  .  .  .  .  .  .  .  .  .  Lbrack: pslab/struct.go:18:6
+   175  .  .  .  .  .  .  .  .  .  .  Elt: *ast.Ident {
+   176  .  .  .  .  .  .  .  .  .  .  .  NamePos: pslab/struct.go:18:8
+   177  .  .  .  .  .  .  .  .  .  .  .  Name: "int"
+   178  .  .  .  .  .  .  .  .  .  .  }
+   179  .  .  .  .  .  .  .  .  .  }
+   180  .  .  .  .  .  .  .  .  }
+   181  .  .  .  .  .  .  .  }
+   182  .  .  .  .  .  .  .  Closing: pslab/struct.go:19:1
+   183  .  .  .  .  .  .  }
+   184  .  .  .  .  .  .  Incomplete: false
+   185  .  .  .  .  .  }
+   186  .  .  .  .  }
+   187  .  .  .  }
+   188  .  .  .  Rparen: -
+   189  .  .  }
+   190  .  }
+   191  .  Scope: *ast.Scope {
+   192  .  .  Objects: map[string]*ast.Object (len = 1) {
+   193  .  .  .  "A": *(obj @ 36)
+   194  .  .  }
+   195  .  }
+   196  .  Imports: []*ast.ImportSpec (len = 1) {
+   197  .  .  0: *(obj @ 12)
+   198  .  }
+   199  .  Unresolved: []*ast.Ident (len = 7) {
+   200  .  .  0: *(obj @ 49)
+   201  .  .  1: *(obj @ 72)
+   202  .  .  2: *(obj @ 78)
+   203  .  .  3: *(obj @ 97)
+   204  .  .  4: *(obj @ 129)
+   205  .  .  5: *(obj @ 148)
+   206  .  .  6: *(obj @ 175)
+   207  .  }
+   208  .  Comments: []*ast.CommentGroup (len = 1) {
+   209  .  .  0: *ast.CommentGroup {
+   210  .  .  .  List: []*ast.Comment (len = 25) {
+   211  .  .  .  .  0: *ast.Comment {
+   212  .  .  .  .  .  Slash: pslab/struct.go:21:1
+   213  .  .  .  .  .  Text: "//func construct() {"
+   214  .  .  .  .  }
+   215  .  .  .  .  1: *ast.Comment {
+   216  .  .  .  .  .  Slash: pslab/struct.go:22:1
+   217  .  .  .  .  .  Text: "//\ta := A{"
+   218  .  .  .  .  }
+   219  .  .  .  .  2: *ast.Comment {
+   220  .  .  .  .  .  Slash: pslab/struct.go:23:1
+   221  .  .  .  .  .  Text: "//\t\ttrue,"
+   222  .  .  .  .  }
+   223  .  .  .  .  3: *ast.Comment {
+   224  .  .  .  .  .  Slash: pslab/struct.go:24:1
+   225  .  .  .  .  .  Text: "//\t\tstruct {"
+   226  .  .  .  .  }
+   227  .  .  .  .  4: *ast.Comment {
+   228  .  .  .  .  .  Slash: pslab/struct.go:25:1
+   229  .  .  .  .  .  Text: "//\t\t\tbool"
+   230  .  .  .  .  }
+   231  .  .  .  .  5: *ast.Comment {
+   232  .  .  .  .  .  Slash: pslab/struct.go:26:1
+   233  .  .  .  .  .  Text: "//\t\t\tint"
+   234  .  .  .  .  }
+   235  .  .  .  .  6: *ast.Comment {
+   236  .  .  .  .  .  Slash: pslab/struct.go:27:1
+   237  .  .  .  .  .  Text: "//\t\t\ta2i []int"
+   238  .  .  .  .  }
+   239  .  .  .  .  7: *ast.Comment {
+   240  .  .  .  .  .  Slash: pslab/struct.go:28:1
+   241  .  .  .  .  .  Text: "//\t\t}{"
+   242  .  .  .  .  }
+   243  .  .  .  .  8: *ast.Comment {
+   244  .  .  .  .  .  Slash: pslab/struct.go:29:1
+   245  .  .  .  .  .  Text: "//\t\t\tfalse,"
+   246  .  .  .  .  }
+   247  .  .  .  .  9: *ast.Comment {
+   248  .  .  .  .  .  Slash: pslab/struct.go:30:1
+   249  .  .  .  .  .  Text: "//\t\t\t2,"
+   250  .  .  .  .  }
+   251  .  .  .  .  10: *ast.Comment {
+   252  .  .  .  .  .  Slash: pslab/struct.go:31:1
+   253  .  .  .  .  .  Text: "//\t\t\t[]int{1, 3},"
+   254  .  .  .  .  }
+   255  .  .  .  .  11: *ast.Comment {
+   256  .  .  .  .  .  Slash: pslab/struct.go:32:1
+   257  .  .  .  .  .  Text: "//\t\t},"
+   258  .  .  .  .  }
+   259  .  .  .  .  12: *ast.Comment {
+   260  .  .  .  .  .  Slash: pslab/struct.go:33:1
+   261  .  .  .  .  .  Text: "//\t\t[]struct {"
+   262  .  .  .  .  }
+   263  .  .  .  .  13: *ast.Comment {
+   264  .  .  .  .  .  Slash: pslab/struct.go:34:1
+   265  .  .  .  .  .  Text: "//\t\t\tstring"
+   266  .  .  .  .  }
+   267  .  .  .  .  14: *ast.Comment {
+   268  .  .  .  .  .  Slash: pslab/struct.go:35:1
+   269  .  .  .  .  .  Text: "//\t\t\taib []bool"
+   270  .  .  .  .  }
+   271  .  .  .  .  15: *ast.Comment {
+   272  .  .  .  .  .  Slash: pslab/struct.go:36:1
+   273  .  .  .  .  .  Text: "//\t\t}{"
+   274  .  .  .  .  }
+   275  .  .  .  .  16: *ast.Comment {
+   276  .  .  .  .  .  Slash: pslab/struct.go:37:1
+   277  .  .  .  .  .  Text: "//\t\t\t{"
+   278  .  .  .  .  }
+   279  .  .  .  .  17: *ast.Comment {
+   280  .  .  .  .  .  Slash: pslab/struct.go:38:1
+   281  .  .  .  .  .  Text: "//\t\t\t\t\"asd\","
+   282  .  .  .  .  }
+   283  .  .  .  .  18: *ast.Comment {
+   284  .  .  .  .  .  Slash: pslab/struct.go:39:1
+   285  .  .  .  .  .  Text: "//\t\t\t\t[]bool{true, false},"
+   286  .  .  .  .  }
+   287  .  .  .  .  19: *ast.Comment {
+   288  .  .  .  .  .  Slash: pslab/struct.go:40:1
+   289  .  .  .  .  .  Text: "//\t\t\t},"
+   290  .  .  .  .  }
+   291  .  .  .  .  20: *ast.Comment {
+   292  .  .  .  .  .  Slash: pslab/struct.go:41:1
+   293  .  .  .  .  .  Text: "//\t\t},"
+   294  .  .  .  .  }
+   295  .  .  .  .  21: *ast.Comment {
+   296  .  .  .  .  .  Slash: pslab/struct.go:42:1
+   297  .  .  .  .  .  Text: "//\t\t[]int{2, 3},"
+   298  .  .  .  .  }
+   299  .  .  .  .  22: *ast.Comment {
+   300  .  .  .  .  .  Slash: pslab/struct.go:43:1
+   301  .  .  .  .  .  Text: "//\t}"
+   302  .  .  .  .  }
+   303  .  .  .  .  23: *ast.Comment {
+   304  .  .  .  .  .  Slash: pslab/struct.go:44:1
+   305  .  .  .  .  .  Text: "//\t_ = a"
+   306  .  .  .  .  }
+   307  .  .  .  .  24: *ast.Comment {
+   308  .  .  .  .  .  Slash: pslab/struct.go:45:1
+   309  .  .  .  .  .  Text: "//}"
+   310  .  .  .  .  }
+   311  .  .  .  }
+   312  .  .  }
+   313  .  }
+   314  }
